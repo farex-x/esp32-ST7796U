@@ -29,7 +29,7 @@ const char* knownNetworks[][2] = {
 WebServer server(80); //80 is default
 
 // --- Auto-Scan ---
-#define SCAN_INTERVAL 30000 /scan wifi every 30s if not connected to any
+#define SCAN_INTERVAL 30000 //scan wifi every 30s if not connected to any
 unsigned long lastScan = 0;
 unsigned long connectTime = 0;
 bool isConnected = false;
@@ -163,7 +163,7 @@ void startWebServer() {
     html += "<p><a href='/event'>voir Info</a></p>";
     html += "<p>server on</p>";
     html += "</body></html>";
-    server.send(200, "text/html", html);  /successful request
+    server.send(200, "text/html", html);  //successful request
   });
 
   server.on("/info", HTTP_GET, []() { //server on http://ip/info
