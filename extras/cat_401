@@ -1,0 +1,10 @@
+server.on("/data", HTTP_GET, []() { //replace /data with your /something
+    String html = "<!DOCTYPE html><html><head>";
+    html += "<meta name='viewport' content='width=device-width, initial-scale=1'>";
+    html += "<style>body{background:black;color:white;text-align:center;padding:50px;} img{max-width:80%;height:auto;}</style>";
+    html += "</head><body>";
+    html += "<title>401 - unothorized</title>";
+    html += "<img src='https://http.cat/401.jpg' alt='Unauthorized'>";
+    html += "</body></html>";
+    server.send(401, "text/html", html);
+});
