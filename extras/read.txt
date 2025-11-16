@@ -1,0 +1,8 @@
+add those files after
+ 
+
+server.on("/###", HTTP_GET, []() {
+    unsigned long uptime = (millis() - connectTime) / 1000;
+    .......
+    server.send(200, "text/html", html);
+  }
